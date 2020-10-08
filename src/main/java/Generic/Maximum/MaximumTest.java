@@ -30,6 +30,11 @@ public class MaximumTest <E extends Comparable<E>> {
 	
     public static <E extends Comparable<E>> E maximum(ArrayList<E> arr) {
     	Collections.sort(arr);
+    	printMax(arr);
     	return arr.get(arr.size()-1);
+    }
+    
+    public static <E> void printMax(ArrayList<E> arr) {
+    	System.out.println(arr.get(arr.size()-1));
     }
 }
