@@ -6,6 +6,34 @@ package Generic.Maximum;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import org.junit.Assert;
+
 public class MaximumJUnitTest {
-    
+    @Test
+    public void testMaximum1() {
+    	MaximumTest intMaxTest = new MaximumTest();
+    	boolean found = false;
+    	if(intMaxTest.maximum(6, 3, 2) == 6) {
+    		found = true;
+    	}
+    	Assert.assertTrue(found);
+    }
+    @Test
+    public void testMaximum2() {
+    	MaximumTest intMaxTest = new MaximumTest();
+    	boolean found = false;
+    	if(intMaxTest.maximum(3, 6, 2) == 6) {
+    		found = true;
+    	}
+    	Assert.assertTrue(found);
+    }
+    @Test
+    public void testMaximum3() {
+    	MaximumTest intMaxTest = new MaximumTest();
+    	boolean found = false;
+    	if(intMaxTest.maximum(2, 3, 6) == 6) {
+    		found = true;
+    	}
+    	Assert.assertTrue(found);
+    }
 }
