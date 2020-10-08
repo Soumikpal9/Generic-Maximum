@@ -22,7 +22,7 @@ public class MaximumJUnitTest {
     public void testMaximum2() {
     	MaximumTest intMaxTest = new MaximumTest();
     	boolean found = false;
-    	if(intMaxTest.maximum("Banana","Peach","Apple") == "Peach") {
+    	if(intMaxTest.maximum(6,4,2) == 6) {
     		found = true;
     	}
     	Assert.assertTrue(found);
@@ -31,7 +31,7 @@ public class MaximumJUnitTest {
     public void testMaximum3() {
     	MaximumTest intMaxTest = new MaximumTest();
     	boolean found = false;
-    	if(intMaxTest.maximum("Apple","Banana","Peach") == "Peach") {
+    	if(intMaxTest.maximum(2.0,6.0,4.0) == 6.0) {
     		found = true;
     	}
     	Assert.assertTrue(found);
