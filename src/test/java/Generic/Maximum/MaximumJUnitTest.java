@@ -6,32 +6,40 @@ package Generic.Maximum;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
+import java.util.ArrayList;
+
 import org.junit.Assert;
 
 public class MaximumJUnitTest {
     @Test
     public void testMaximum1() {
-    	MaximumTest intMaxTest = new MaximumTest();
+    	MaximumTest intMaxTest = new MaximumTest("Peach","Banana","Apple","Guava","Orange");
+    	ArrayList<String> arr = new ArrayList<String>();
+    	arr = intMaxTest.addValues();
     	boolean found = false;
-    	if(intMaxTest.maximum("Peach","Banana","Apple") == "Peach") {
+    	if(intMaxTest.maximum(arr) == "Peach") {
     		found = true;
     	}
     	Assert.assertTrue(found);
     }
     @Test
     public void testMaximum2() {
-    	MaximumTest intMaxTest = new MaximumTest();
+    	MaximumTest intMaxTest = new MaximumTest(6,4,2,5,3);
+    	ArrayList<Integer> arr = new ArrayList<Integer>();
+    	arr = intMaxTest.addValues();
     	boolean found = false;
-    	if(intMaxTest.maximum("Banana","Peach","Apple") == "Peach") {
+    	if(intMaxTest.maximum(arr) == 6) {
     		found = true;
     	}
     	Assert.assertTrue(found);
     }
     @Test
     public void testMaximum3() {
-    	MaximumTest intMaxTest = new MaximumTest();
+    	MaximumTest intMaxTest = new MaximumTest(2.0,6.0,4.0,4.5,5.0);
+    	ArrayList<Double> arr = new ArrayList<Double>();
+    	arr = intMaxTest.addValues();
     	boolean found = false;
-    	if(intMaxTest.maximum("Apple","Banana","Peach") == "Peach") {
+    	if(intMaxTest.maximum(arr) == 6.0) {
     		found = true;
     	}
     	Assert.assertTrue(found);

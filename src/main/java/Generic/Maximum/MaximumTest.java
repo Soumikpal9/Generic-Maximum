@@ -3,37 +3,33 @@
  */
 package Generic.Maximum;
 
-public class MaximumTest {
-    public static Integer maximum(Integer a, Integer b, Integer c) {
-    	Integer max = a;
-    	if(b.compareTo(max) > 0) {
-    		max = b;
-    	}
-    	if(c.compareTo(max) > 0) {
-    		max = c;
-    	}
-    	return max;
-    }
-    
-    public static Double maximum(Double a, Double b, Double c) {
-    	Double max = a;
-    	if(b.compareTo(max) > 0) {
-    		max = b;
-    	}
-    	if(c.compareTo(max) > 0) {
-    		max = c;
-    	}
-    	return max;
-    }
-    
-    public static String maximum(String a, String b, String c) {
-    	String max = a;
-    	if(b.compareTo(max) > 0) {
-    		max = b;
-    	}
-    	if(c.compareTo(max) > 0) {
-    		max = c;
-    	}
-    	return max;
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class MaximumTest <E extends Comparable<E>> {
+	E a, b, c, d, e;
+	ArrayList<E> arr = new ArrayList<E>();
+	
+	public MaximumTest(E a, E b, E c, E d, E e) {
+		this.a = a;
+		this.b = b;
+		this.c = c;
+		this.d = d;
+		this.e = e;
+	}
+	
+	public ArrayList<E> addValues(){
+		arr.add(a);
+		arr.add(b);
+		arr.add(c);
+		arr.add(d);
+		arr.add(e);
+		
+		return arr;
+	}
+	
+    public static <E extends Comparable<E>> E maximum(ArrayList<E> arr) {
+    	Collections.sort(arr);
+    	return arr.get(arr.size()-1);
     }
 }
