@@ -3,7 +3,14 @@
  */
 package Generic.Maximum;
 
-public class MaximumTest {
+public class MaximumTest <E extends Comparable<E>> {
+	E a, b, c;
+	
+	public MaximumTest(E a, E b, E c) {
+		this.a = a;
+		this.b = b;
+		this.c = c;
+	}
 	
 	public static <E extends Comparable<E>> E maximum(E a, E b, E c){
 		E max = a;
